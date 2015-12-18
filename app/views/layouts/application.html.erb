@@ -6,9 +6,46 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-<body class = '<%= controller.controller_name %>'>
+<body class ='<%= controller.controller_name %>'>
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class='container'>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to store_index_path, class: 'navbar-brand' do %>
+        <i class="fa fa-shopping-cart"></i>
+        <%= @page_title || "Online Store" %>
+      <% end %>
+    </div>
+    <div class="collapse navbar-collapse" id="main-nav-collapse">
+      <div class="nav navbar-nav navbar-right">
+     
+        <!--  <%= button_to "Sign Out", '#', method: :delete, class: 'btn btn-primary navbar-btn' %>-->
+        
+        <!--  <%= link_to "Log In", '#', class: 'btn btn-primary navbar-btn', method: :get %>-->
+        
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <!--   <li><%= link_to "My Account", '#' %></li>-->
+        <!--    <li><%= link_to "Community", '#' %></li>-->
+        
+        <li><%= link_to "Home", store_index_path %></li>
+        <li><%= link_to "FAQ", '#' %></li>
+        <li><%= link_to "About", '#' %></li>
+        <li><%= link_to "Contact Us", '#' %></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
+   <!--Flash messages will go here-->
   
-<%= yield %>
-
+  <%= yield %>
+</div>
+  
 </body>
 </html>

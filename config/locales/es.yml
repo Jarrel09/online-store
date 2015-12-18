@@ -1,0 +1,6 @@
+es:
+
+  activerecord:
+    errors:
+      messages:
+        taken:  "El titulo ya se ha escogido."
