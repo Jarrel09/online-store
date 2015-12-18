@@ -1,13 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
-
-two:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
+iphone:
+  title: "Iphone 6"
+  description: "sample text"
+  image_url: iphone6.png
+  price: 699.99
