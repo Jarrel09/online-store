@@ -18,6 +18,11 @@ Rails.application.configure do
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
+  
+  # Whitelist Fontawesome address so that icons appear correctly in development
+  class Application < Rails::Application
+    config.web_console.whitelisted_ips = '66.215.210.3'
+  end
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
